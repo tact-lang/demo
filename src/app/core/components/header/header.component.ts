@@ -8,6 +8,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { LINKS } from '@core/constants/LINKS';
+import { ROUTE_PATH } from '@app/app-routing.module';
 
 @Component({
   selector: 'app-header',
@@ -33,6 +34,8 @@ export class HeaderComponent {
   public burgerOpened = false;
 
   public LINKS = LINKS;
+
+  public ROUTE_PATH = ROUTE_PATH;
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {}
 

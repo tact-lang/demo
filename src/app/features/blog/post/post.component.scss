@@ -1,0 +1,48 @@
+@use 'src/styles';
+
+:host {
+  display: block;
+  cursor: pointer;
+}
+
+.post-title {
+  @include styles.font-header-2();
+  color: styles.$blue;
+  cursor: pointer;
+  margin: 0 0 4px 0;
+  line-height: 32px;
+}
+
+.post-content {
+  display: flex;
+
+  &__date {
+    width: 140px;
+    flex-shrink: 0;
+    padding-right: 24px;
+
+    @include styles.font-header-2();
+    color: styles.$gray-500;
+    cursor: pointer;
+    line-height: 32px;
+
+    @include styles.b(mobile) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  @include styles.b(mobile) {
+    flex-direction: column;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: styles.$inter-font;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--gray-300);
+  }
+}

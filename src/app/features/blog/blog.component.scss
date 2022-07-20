@@ -1,0 +1,57 @@
+@use 'src/styles';
+
+:host {
+  flex: 1;
+}
+
+.font-header {
+  @include styles.font-header();
+
+  @include styles.b(desktop) {
+    font-size: 36px;
+  }
+
+  text-transform: uppercase;
+}
+
+main {
+  padding-top: 76px;
+  margin-bottom: 76px;
+
+  @include styles.b(mobile) {
+    padding-top: 60px;
+  }
+
+  @include styles.b(tablet) {
+    margin-bottom: 64px;
+  }
+}
+
+section:not(:last-child) {
+  margin-bottom: 76px;
+
+  @include styles.b(tablet) {
+    margin-bottom: 64px;
+  }
+}
+
+h1 {
+  margin: 0 0 40px;
+
+  @include styles.b(tablet) {
+    margin-bottom: 32px;
+  }
+}
+
+a {
+  display: block;
+  height: fit-content;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+
+    @include styles.b(tablet) {
+      margin-bottom: 32px;
+    }
+  }
+}

@@ -34,6 +34,10 @@ header {
   &:not(:last-child) {
     margin-right: 48px;
   }
+
+  &_active {
+    color: styles.$gray-100;
+  }
 }
 
 .burger {

@@ -1,0 +1,8 @@
+<main>
+  <section *ngFor="let group of groupedPosts">
+    <h1 class="font-header">Posts in {{ group.year }}</h1>
+    <a *ngFor="let post of group.posts" [link]="post.url">
+      <app-post [post]="post"></app-post>
+    </a>
+  </section>
+</main>

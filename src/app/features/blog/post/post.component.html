@@ -1,0 +1,9 @@
+<article [link]="post.url">
+  <div class="post-content">
+    <div class="post-content__date">{{ post.date | date: 'MMM. dd' }}</div>
+    <div class="post-content__main">
+      <h2 class="post-title inline-link">{{ post.title }}</h2>
+      <p class="post-content__text">{{ post.abstract }}</p>
+    </div>
+  </div>
+</article>
